@@ -1,0 +1,11 @@
+.Property_binding {
+    padding: 30px;
+    background-color: #ccc;
+    border-radius: 5px;
+
+    .color-red {
+        color: red;
+        font-family: 'Courier New', Courier, monospace;
+        margin-top: 10px;
+    }
+}

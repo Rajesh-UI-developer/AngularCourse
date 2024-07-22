@@ -1,0 +1,14 @@
+<div class="event_binding">
+    <h1>Event Binding</h1>
+    <button class="eventbtn" (click)="FontStyle()">Event Handler</button>
+    <button class="eventbtn" (click)="FontStyleRevert()">Revert Event Handler</button>
+
+    <p [style]="dynamicStyle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint provident iure molestiae et
+        natus
+        incidunt
+        inventore libero architecto mollitia iste. Sed libero illum ea. Consequatur dolorem accusantium eum id esse.</p>
+
+    <input type="text" (input)="InputText($event)">
+    <h4>{{ text }}</h4>
+
+</div>

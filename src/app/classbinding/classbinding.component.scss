@@ -1,0 +1,29 @@
+.classbinding {
+    padding: 20px;
+    background-color: #ccc;
+    margin-top: 20px;
+
+    .className {
+        background-color: aqua;
+    }
+
+    .textColor {
+        color: red;
+    }
+
+    .textColorBlue {
+        color: blue;
+    }
+
+    .textStyle {
+        font-style: italic;
+    }
+
+    .textSize {
+        font-size: 30px;
+    }
+
+    .textBold {
+        font-weight: 900;
+    }
+}
