@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './stylebinding.component.scss'
 })
 export class StylebindingComponent {
-  isActive: boolean = true;
+  isActive: boolean = false;
   textColor: string = 'blue';
   fontSize: string = '26px';
   weight: number = 900;

@@ -1,0 +1,12 @@
+<div class="child">
+    <h1>Output Decorator child Component</h1>
+    <input type="text" [(ngModel)]="text" placeholder="Type something here....">
+    <br>
+    <br>
+    <button type="button" (click)="ChildToParent()">Child Button</button>
+    <br><br>
+    <label for="">Type here to see the instant changes on parent</label><br>
+    <br>
+    <input type="text" (input)="inputChange($event)" placeholder="Instant change to parent">
+
+</div>

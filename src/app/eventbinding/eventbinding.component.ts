@@ -29,6 +29,8 @@ export class EventbindingComponent {
     }
   }
   InputText(event: Event) {
+    console.log(event);
+    
     this.text = (<HTMLInputElement>event.target).value
   }
 }
