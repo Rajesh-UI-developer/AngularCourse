@@ -1,5 +1,5 @@
 <div class="parent">
-    <h1>Decorator parent</h1>
+    <h1>Input Decorator parent</h1>
 
     <input type="text" [(ngModel)]="ParentData" placeholder="Type Something here...">
     <br><br>
@@ -7,5 +7,9 @@
     <button type="button" (click)="ChangeText()">Click here to change text</button>
     <br><br>
     <button type="button" (click)="EmptyText()">Click here to empty text</button>
+
+
     <app-childinput [dataFromParent]="ParentData"></app-childinput>
+
+    
 </div>

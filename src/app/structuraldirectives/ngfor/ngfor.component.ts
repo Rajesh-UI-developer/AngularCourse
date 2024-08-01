@@ -16,5 +16,4 @@ export class NgforComponent {
     { id: 3, name: 'Charlie Brown', email: 'charlie@example.com' }
   ];
 
-
 }

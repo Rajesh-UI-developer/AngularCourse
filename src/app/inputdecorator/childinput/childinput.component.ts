@@ -8,5 +8,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './childinput.component.scss'
 })
 export class ChildinputComponent {
+  // 1st
   @Input() dataFromParent: string = '';
+
 }

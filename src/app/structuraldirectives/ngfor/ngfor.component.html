@@ -1,13 +1,20 @@
 <div class="parent">
     <h1>Ng For Structural Directives</h1>
 
+
+    
     <ul>
         <li *ngFor="let item of items">{{ item }}</li>
     </ul>
+
+
+
     <br>
     <ul>
         <li *ngFor="let user of users; let i = index">
             {{ i + 1 }} <strong>{{ user.name }}</strong> - {{ user.email }}
         </li>
     </ul>
+
+    
 </div>

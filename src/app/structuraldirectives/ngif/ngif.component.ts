@@ -10,7 +10,10 @@ import { NgIf } from '@angular/common';
 })
 export class NgifComponent {
   isVisible: boolean = true;
+
+
   toggleVisibility() {
-    this.isVisible = !this.isVisible
+    this.isVisible = !this.isVisible;
   }
+  
 }

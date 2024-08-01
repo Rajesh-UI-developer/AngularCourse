@@ -1,0 +1,109 @@
+<h2>Template Driven Form</h2>
+
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+
+    <div class="form_group">
+        <label for="name">Name:</label>
+        <input id="name" name="name" autocomplete="off" [(ngModel)]="user.name" #name="ngModel" required minlength="3"
+            (ngModelChange)="validate(form)">
+
+        <div class="error_" *ngIf="name.invalid && (name.dirty || name.touched)">
+
+            <div *ngIf="name.errors?.['required']">
+                Name is required.
+            </div>
+
+            <div *ngIf="name.errors?.['minlength']">
+                Minimum length greater than 3.
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="form_group">
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" name="lastName" [(ngModel)]="user.lastName" #lastName="ngModel" required
+            (ngModelChange)="validate(form)">
+        <div class="error_" *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+            <div *ngIf="lastName.errors?.['required']">
+                Last Name is required.
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="form_group">
+        <label for="email">Email:</label>
+        <input id="email" name="email" [(ngModel)]="user.email" #email="ngModel" required email
+            (ngModelChange)="validate(form)">
+
+
+        <div class="error_" *ngIf="email.invalid && (email.dirty || email.touched)">
+
+
+            <div *ngIf="email.errors?.['required']">
+                Email is required.
+            </div>
+
+            <div *ngIf="email.errors?.['email']">
+                Email is invalid.
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="form_group">
+        <label for="password">Password:</label>
+        <input id="password" name="password" [(ngModel)]="user.password" #password="ngModel" required minlength="6"
+            type="password" (ngModelChange)="validate(form)">
+
+
+        <div class="error_" *ngIf="password.invalid && (password.dirty || password.touched)">
+            <div *ngIf="password.errors?.['required']">
+                Password is required.
+            </div>
+            <div *ngIf="password.errors?.['minlength']">
+                Password must be at least 6 characters.
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="form_group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input id="confirmPassword" name="confirmPassword" [(ngModel)]="user.confirmPassword" #confirmPassword="ngModel"
+            required type="password" (ngModelChange)="validateConfirmPassword(form)">
+
+
+        <div class="error_" *ngIf="confirmPassword.dirty || confirmPassword.touched">
+
+
+            <div *ngIf="confirmPassword.errors?.['required']">
+                Confirm Password is required.
+            </div>
+
+            <div *ngIf="errorMessages?.confirmPassword && !confirmPassword.errors?.['required']">
+                {{ errorMessages.confirmPassword }}
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- [disabled]="form.invalid" -->
+
+    <button [ngClass]="{ 'submit_btn': true, 'invalid_': form.invalid }" [disabled]="form.invalid"
+        type="submit">Submit</button>
+
+</form>

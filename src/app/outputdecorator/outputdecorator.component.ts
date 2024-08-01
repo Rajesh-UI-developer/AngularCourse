@@ -10,7 +10,11 @@ import { ChildoutputComponent } from './childoutput/childoutput.component';
 })
 export class OutputdecoratorComponent {
   textfromchild: string = '';
+
+
   DataRecieved(event: string) {
     this.textfromchild = event;
   }
+
+  
 }

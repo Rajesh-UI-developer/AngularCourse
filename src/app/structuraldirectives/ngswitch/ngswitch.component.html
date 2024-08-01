@@ -1,12 +1,15 @@
 <div class="parent">
     <h1>Ng Switch Structural Directives</h1>
 
+    
     <div [ngSwitch]="role">
         <div *ngSwitchCase="'admin'">Welcome, Admin! You have full access.</div>
         <div *ngSwitchCase="'user'">Welcome, User! You have limited access.</div>
         <div *ngSwitchCase="'guest'">Welcome, Guest! Please log in to get more access.</div>
         <div *ngSwitchDefault>Welcome, Stranger! Please sign up.</div>
     </div>
+
+
     <br><br>
     <button (click)="setRole('admin')">Set Admin</button>
     <button (click)="setRole('user')">Set User</button>

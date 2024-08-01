@@ -1,0 +1,45 @@
+<h1>Custom Validation Template Driven Form</h1>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" novalidate>
+    <div class="form_group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" />
+        <div *ngIf="firstNameErrors(firstName)" class="error_">
+            {{ firstNameErrors(firstName) }}
+        </div>
+    </div>
+
+    <div class="form_group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" />
+        <div *ngIf="lastNameErrors(lastName)" class="error_">
+            {{ lastNameErrors(lastName) }}
+        </div>
+    </div>
+
+    <div class="form_group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="model.email" #email="ngModel" />
+        <div *ngIf="emailErrors(email)" class="error_">
+            {{ emailErrors(email) }}
+        </div>
+    </div>
+
+    <div class="form_group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="model.password" #password="ngModel" />
+        <div *ngIf="passwordErrors(password)" class="error_">
+            {{ passwordErrors(password) }}
+        </div>
+    </div>
+
+    <div class="form_group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="model.confirmPassword"
+            #confirmPassword="ngModel" />
+        <div *ngIf="confirmPasswordErrors(confirmPassword)" class="error_">
+            {{ confirmPasswordErrors(confirmPassword) }}
+        </div>
+    </div>
+
+    <button type="submit" class="submit_btn" [disabled]="!isFormValid(userForm)">Submit</button>
+</form>

@@ -1,0 +1,130 @@
+<!-- <div class="parent">
+
+    <h1>Ng Template and Ng Container Concept</h1>
+
+    <ng-template #myTemplate>
+        <p style="color: red;">Content to show if condition is true.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse sequi fugiat delectus excepturi sunt debitis
+            veritatis tempora. Quidem iure deserunt vel sed ratione! Officia cupiditate mollitia, temporibus non ipsa
+            quos.
+        </p>
+    </ng-template>
+
+    <ng-template #elseTemplate>
+        <p style="color: blue;">Content to show if condition is false.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio illum voluptates ut minima sint. Sed illo
+            nesciunt doloremque aspernatur cumque. Facilis, sequi alias. In doloribus, error impedit veritatis
+            consequuntur fugiat?
+        </p>
+    </ng-template>
+
+    <div *ngIf="condition; else elseTemplate">
+        <p style="color: red;">Content to show if condition is true.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut dolorum consectetur quas dignissimos. Laborum
+            rerum suscipit aut, veniam blanditiis deleniti quaerat ducimus temporibus quod hic eos molestiae, odio
+            soluta exercitationem.
+        </p>
+    </div>
+    <br>
+
+    <section class="dv" *ngIf="!condition; else elseTemplate">
+        <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*bMgQ8MhbnQexpqHgIgBJPA.png" alt="">
+
+    </section>
+
+    <br>
+    <hr>
+    <h4>Ng Container</h4>
+    <ng-container>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia ab sint, animi enim iste possimus distinctio
+        laudantium illo deserunt. Sequi aut facere in expedita dolore iste iure similique voluptatibus nisi.
+
+    </ng-container>
+
+    <ng-container [ngTemplateOutlet]="condition ? myTemplate : elseTemplate"></ng-container>
+
+    <ng-container *ngIf="condition">
+
+        <h1>Grouping Elements </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae sunt doloremque error cum quisquam quia
+            consectetur itaque fugiat provident vel necessitatibus eius asperiores vero, rerum commodi magnam facere
+            nobis quasi.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quos a aspernatur! Sed, expedita? Voluptatem
+            libero nobis repudiandae architecto. Labore quasi libero vitae delectus nemo totam, eaque voluptates
+            dolorem. Ipsam!</p>
+        <button type="button">Subscribe</button>
+
+
+    </ng-container>
+
+    <hr>
+
+    @if(condition){
+    <p>Condtion is succeed</p>
+    }
+    @else{
+    <p>Condtion is failed</p>
+    }
+
+    @for(item of [1,2,3,4,5,6,7]; track item){
+
+    <p>For loop is printed : {{ item }}</p>
+
+    }
+
+
+
+    <button type="button" (click)="toggle()">Toggle Condition</button>
+
+</div>
+ -->
+
+<app-ngcontent> <!-- child component -->
+
+    <div body>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nihil vel voluptates, iste voluptate
+            nostrum
+            aut itaque a magni laudantium assumenda voluptas minus rem, suscipit deserunt optio nesciunt cupiditate in.
+        </p>
+
+        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates amet quaerat sequi optio consectetur
+            doloribus debitis omnis modi doloremque fuga enim aliquam nulla, eaque nam reiciendis asperiores dolore ea
+            corporis.</span>
+
+        <button type="button">Button from parent</button>
+
+        </div>
+
+</app-ngcontent>
+
+
+<app-ngcontent> <!-- child component -->
+
+    <ng-container body>
+        <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*bMgQ8MhbnQexpqHgIgBJPA.png" alt="">
+
+        <button type="button">Button from parent</button>
+
+    </ng-container>
+
+</app-ngcontent>
+
+
+<!-- <app-ngcontenttwo>
+
+    <ng-container body>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nihil vel voluptates, iste voluptate
+            nostrum
+            aut itaque a magni laudantium assumenda voluptas minus rem, suscipit deserunt optio nesciunt cupiditate in.
+        </p>
+
+        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates amet quaerat sequi optio consectetur
+            doloribus debitis omnis modi doloremque fuga enim aliquam nulla, eaque nam reiciendis asperiores dolore ea
+            corporis.</span>
+
+        <button type="button">Button from parent</button>
+
+    </ng-container>
+
+</app-ngcontenttwo> -->
