@@ -3,9 +3,11 @@
     <div class="form_group">
         <label for="firstName">First Name:</label>
         <input type="text" id="firstName" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" />
+
         <div *ngIf="firstNameErrors(firstName)" class="error_">
             {{ firstNameErrors(firstName) }}
         </div>
+        
     </div>
 
     <div class="form_group">
@@ -41,5 +43,7 @@
         </div>
     </div>
 
-    <button type="submit" class="submit_btn" [disabled]="!isFormValid(userForm)">Submit</button>
+    <!-- [disabled]="!isFormValid(userForm)" -->
+    <button type="submit" class="submit_btn" 
+    >Submit</button>
 </form>

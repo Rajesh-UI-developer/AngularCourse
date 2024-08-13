@@ -1,11 +1,11 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule, NgForm ,NgModel} from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-customtemplatedriven',
   standalone: true,
-  imports: [FormsModule,NgIf],
+  imports: [FormsModule, NgIf],
   templateUrl: './customtemplatedriven.component.html',
   styleUrl: './customtemplatedriven.component.scss'
 })
@@ -29,6 +29,7 @@ export class CustomtemplatedrivenComponent {
     if (firstName?.value.length > this.firstNameMaxLength) {
       return `First Name cannot be more than ${this.firstNameMaxLength} characters long.`;
     }
+
     return null;
   }
 
@@ -101,8 +102,10 @@ export class CustomtemplatedrivenComponent {
   onSubmit(form: NgForm) {
     if (this.isFormValid(form)) {
       console.log('Form Submitted!', this.model);
+
     } else {
       console.log('Form is invalid');
     }
+    
   }
 }

@@ -15,6 +15,9 @@ import { LifecycleparentComponent } from './lifecycleparent/lifecycleparent.comp
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FormparentComponent } from './formparent/formparent.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { ServiceComComponent } from './service/service-com/service-com.component';
+import { ShareingComponent } from './service/shareing/shareing.component';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +25,7 @@ import { FormparentComponent } from './formparent/formparent.component';
   imports: [RouterOutlet, NgIf, FormsModule, PropertybindingComponent, EventbindingComponent, TemplateReferenceComponent,
     ClassbindingComponent, StylebindingComponent, TwowaydatabindingComponent, InputdecoratorComponent,
     OutputdecoratorComponent, StructuraldirectivesComponent, NgtemplateComponent, LifecycleparentComponent,
-    FormparentComponent],
+    FormparentComponent,PipeComponent,ServiceComComponent,ShareingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

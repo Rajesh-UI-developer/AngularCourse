@@ -1,0 +1,8 @@
+<div>
+    <h2>Standalone Component</h2>
+    <input #itemInput type="text" placeholder="Enter item" />
+    <button (click)="addItem(itemInput)">Add Item</button>
+    <ul>
+        <li *ngFor="let item of items">{{ item }}</li>
+    </ul>
+</div>

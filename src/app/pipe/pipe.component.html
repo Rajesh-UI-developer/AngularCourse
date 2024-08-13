@@ -1,0 +1,29 @@
+<h1>Pipe Component</h1>
+
+<p>Today's Date: {{ today | date:'fullDate' }}</p>
+<!-- Today's Date: Monday, August 5, 2024 -->
+<p>Price: {{ price | currency:'USD' }}</p>
+<!-- Price: $1,234.56 -->
+<p>Amount: {{ amount | number:'1.2-2' }}</p>
+<!-- Amount: 1,234.57 -->
+<p>Percentage: {{ fraction | percent }}</p>
+<!-- Percentage: 25% -->
+<p>Uppercase: {{ 'hello world' | uppercase }}</p>
+<!-- Uppercase: HELLO WORLD -->
+<p>Lowercase: {{ 'HELLO WORLD' | lowercase }}</p>
+<!-- Lowercase: hello world -->
+<p>JSON: {{ data | json }}</p>
+<!-- JSON: { "name": "John", "age": 30 } -->
+<p>Slice: {{ 'abcdefgh' | slice:2:5 }}</p>
+<!-- Slice: cde -->
+
+
+<p>{{ 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vitae sunt perspiciatis libero quis vel
+    istepraesentiumab voluptas ipsum fugiat odio, commodi consectetur, ex nam quidem. Culpa, quasi est?Lorem ipsum dolor
+    sit amet consectetur adipisicing elit. Aliquam perspiciatis alias mollitia non veritatis quisquamillo repudiandae
+    et. Vitae molestiae aliquid eligendi nesciunt voluptatibus debitis unde repellendus vero blanditiisid!Lorem ipsum
+    dolor sit amet consectetur adipisicing elit. Rem vitae sunt perspiciatis libero quis vel istepraesentiumab voluptas
+    ipsum fugiat' | ellipse:220:true}}
+</p>
+
+<span>{{ 'Manual ' | manual }}</span>
