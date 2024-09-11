@@ -1,10 +1,11 @@
 import { NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
+import { HoverHighlightDirective } from './customattributedirective/customdirective';
 
 @Component({
   selector: 'app-stylebinding',
   standalone: true,
-  imports: [NgStyle],
+  imports: [NgStyle,HoverHighlightDirective],
   templateUrl: './stylebinding.component.html',
   styleUrl: './stylebinding.component.scss'
 })

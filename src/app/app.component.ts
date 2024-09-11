@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { PropertybindingComponent } from './propertybinding/propertybinding.component';
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { TemplateReferenceComponent } from './template-reference/template-reference.component';
@@ -18,14 +18,16 @@ import { FormparentComponent } from './formparent/formparent.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { ServiceComComponent } from './service/service-com/service-com.component';
 import { ShareingComponent } from './service/shareing/shareing.component';
+import { ApiintegrationComponent } from './apiintegration/apiintegration.component';
+import { FirstcomponentComponent } from './newcomponent/firstcomponent/firstcomponent.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgIf, FormsModule, PropertybindingComponent, EventbindingComponent, TemplateReferenceComponent,
+  imports: [RouterOutlet, RouterModule, NgIf, FormsModule, PropertybindingComponent, EventbindingComponent, TemplateReferenceComponent,
     ClassbindingComponent, StylebindingComponent, TwowaydatabindingComponent, InputdecoratorComponent,
     OutputdecoratorComponent, StructuraldirectivesComponent, NgtemplateComponent, LifecycleparentComponent,
-    FormparentComponent,PipeComponent,ServiceComComponent,ShareingComponent],
+    FormparentComponent, PipeComponent, ServiceComComponent, ShareingComponent, ApiintegrationComponent,FirstcomponentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

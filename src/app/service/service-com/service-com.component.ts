@@ -13,10 +13,10 @@ export class ServiceComComponent {
   items: string[] = [];
 
   constructor(private dataService: DataService) {
-    // this.items = this.dataService.getData();
-    this.dataService.getData$().subscribe(data => {
-      this.items = data; // Update the items list whenever data changes
-    });
+    this.items = this.dataService.getData$();
+    // this.dataService.getData$().subscribe(data => {
+    //   this.items = data; // Update the items list whenever data changes
+    // });
   }
 
   addItem(input: HTMLInputElement) {

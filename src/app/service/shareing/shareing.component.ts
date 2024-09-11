@@ -7,14 +7,15 @@ import { NgFor } from '@angular/common';
   standalone: true,
   imports: [NgFor],
   templateUrl: './shareing.component.html',
-  styleUrl: './shareing.component.scss'
+  styleUrl: './shareing.component.scss',
 })
 export class ShareingComponent {
   items: string[] = [];
 
   constructor(private dataService: DataService) {
-    this.dataService.getData$().subscribe(data => {
-      this.items = data; // Update the list whenever data changes
-    });
+    this.items = this.dataService.getData$();
+    // this.dataService.getData$().subscribe(data => {
+    //   this.items = data; // Update the list whenever data changes
+    // });
   }
 }
