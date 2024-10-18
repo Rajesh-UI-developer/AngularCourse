@@ -14,6 +14,7 @@ export class EventbindingComponent {
     color: 'blue',
     fontStyle: 'normal'
   }
+  
   FontStyle() {
     this.dynamicStyle = {
       fontSize: '50px',
@@ -21,6 +22,7 @@ export class EventbindingComponent {
       fontStyle: 'italic'
     }
   }
+
   FontStyleRevert() {
     this.dynamicStyle = {
       fontSize: '30px',
@@ -28,9 +30,11 @@ export class EventbindingComponent {
       fontStyle: 'normal'
     }
   }
+
   InputText(event: Event) {
     console.log(event);
-    
     this.text = (<HTMLInputElement>event.target).value
   }
+
+  
 }

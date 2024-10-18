@@ -4,7 +4,7 @@
 
     <div class="form_group">
         <label for="name">Name</label>
-        <input id="name" formControlName="name" />
+        <input id="name" formControlName="name" placeholder="Enter your name"/>
 
         <div class="error_" *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
             <div *ngIf="userForm.get('name')?.errors?.['required']">Name is required.</div>
@@ -99,9 +99,9 @@
             </div>
         </div>
 
-    </div> -->
+    </div> 
 
-    <!-- <div formGroupName="Qualifications">
+     <div formGroupName="Qualifications">
 
         <div class="form_group">
             <label for="sslc">sslc</label>
@@ -132,7 +132,7 @@
 
     <!-- [disabled]="userForm.invalid" -->
     <div class="footer_">
-        <button type="submit" class="submit_btn">Submit</button>
+        <button type="submit" class="submit_btn" >Submit</button>
         <button class="edit" type="button" (click)="onEdit()">Edit</button>
         <button class="reset" type="reset">Reset</button>
     </div>

@@ -20,6 +20,9 @@ import { ServiceComComponent } from './service/service-com/service-com.component
 import { ShareingComponent } from './service/shareing/shareing.component';
 import { ApiintegrationComponent } from './apiintegration/apiintegration.component';
 import { FirstcomponentComponent } from './newcomponent/firstcomponent/firstcomponent.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { CustomModule } from './modulecompontent/custom.module';
+import { EditProfileComponent } from './profile.component';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +30,8 @@ import { FirstcomponentComponent } from './newcomponent/firstcomponent/firstcomp
   imports: [RouterOutlet, RouterModule, NgIf, FormsModule, PropertybindingComponent, EventbindingComponent, TemplateReferenceComponent,
     ClassbindingComponent, StylebindingComponent, TwowaydatabindingComponent, InputdecoratorComponent,
     OutputdecoratorComponent, StructuraldirectivesComponent, NgtemplateComponent, LifecycleparentComponent,
-    FormparentComponent, PipeComponent, ServiceComComponent, ShareingComponent, ApiintegrationComponent,FirstcomponentComponent],
+    FormparentComponent, PipeComponent, ServiceComComponent, ShareingComponent, ApiintegrationComponent,FirstcomponentComponent,
+    RxjsComponent,CustomModule,EditProfileComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

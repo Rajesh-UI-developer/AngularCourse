@@ -1,10 +1,10 @@
 <h1>App Component</h1>
 
-<app-propertybinding></app-propertybinding>
-<app-eventbinding></app-eventbinding>
-<app-template-reference></app-template-reference>
-<app-classbinding></app-classbinding>
-<app-stylebinding></app-stylebinding>
+<!-- <app-propertybinding></app-propertybinding> -->
+<!-- <app-eventbinding></app-eventbinding> -->
+<!-- <app-template-reference></app-template-reference> -->
+<!-- <app-classbinding></app-classbinding> -->
+<!-- <app-stylebinding></app-stylebinding> -->
 <!-- <app-twowaydatabinding></app-twowaydatabinding> -->
 
 <!-- Input Decorator -->
@@ -31,8 +31,13 @@
 
     <app-lifecycleparent *ngIf="isTrue" [value]="value">
 
+      <div>
+
+      </div>
+
         <p texts>{{ defaultText }}</p>
-       <input type="text" placeholder="Enter your name" nameContent>
+        <p texts>{{ defaultText }}</p>
+       <input type="text" placeholder="Enter your name" nameContent #contentchild>
 
     </app-lifecycleparent>
 
@@ -47,10 +52,12 @@
 <!-- <app-shareing></app-shareing> -->
 
 <!-- <app-apiintegration></app-apiintegration> -->
+<!-- <app-rxjs></app-rxjs> -->
 
+<app-customcomponent1></app-customcomponent1>
+    <app-customcomponent2></app-customcomponent2>
 
-
-<!-- <nav class="navbar">
+<nav class="navbar">
     <div class="navbar-container">
       <a href="#" class="logo">Angular</a>
       <ul class="nav-links">
@@ -58,6 +65,8 @@
         <li><a routerLink="/reactiveform">Reactiveform</a></li>
         <li><a routerLink="/propertybinding">Propertybinding</a></li>
         <li><a routerLink="/twowaybinding">Twowaybinding</a></li>
+        <li><a routerLink="/profile">Profile</a></li>
+        <li><a routerLink="/directive">Directives</a></li>
       </ul>
       <div class="menu-toggle">
         <span class="bar"></span>
@@ -68,7 +77,10 @@
   </nav>
   
 
-<router-outlet></router-outlet> -->
+  <!-- All components is going to render inside this -->
+<router-outlet>
+
+</router-outlet>
 
 
 

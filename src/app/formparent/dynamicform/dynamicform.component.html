@@ -1,0 +1,23 @@
+<form [formGroup]="dynamicForm" (ngSubmit)="onSubmit()">
+    <div formArrayName="items">
+      <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i">
+        <label>
+          Name:
+          <input formControlName="name" />
+        </label>
+        <label>
+          Age:
+          <input formControlName="age" type="number" />
+        </label>
+        <button type="button" (click)="removeItem(i)">Remove</button>
+      </div>
+    </div>
+    <button type="button" (click)="addItem()">Add Item</button>
+    <button type="submit">Submit</button>
+  </form>
+  
+  <div *ngIf="dynamicForm.value.items.length > 0">
+    <h3>Submitted Values:</h3>
+    <pre>{{ dynamicForm.value | json }}</pre>
+  </div>
+  

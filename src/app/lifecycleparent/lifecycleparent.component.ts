@@ -11,50 +11,50 @@ import { LifecyclesubchildComponent } from './lifecyclesubchild/lifecyclesubchil
 })
 export class LifecycleparentComponent {
   @Input() value: string = '';
-  @ContentChild('nameContent') nameContent!: ElementRef;
+  @ContentChild('contentchild') contentchild!: ElementRef;
 
   // constructor() {
   //   console.log('Parent Constructor');
   // }
 
-  ngOnChanges(changes: SimpleChanges) {
-    console.log('Parent ngOnChanges', changes);
-    // if (changes['value'].firstChange) {
-    //   console.log('If Condition', changes['value'].currentValue);
+  // ngOnChanges(changes: SimpleChanges) {
+  //   console.log('Parent ngOnChanges', changes);
+  //   // if (changes['value'].firstChange) {
+  //   //   console.log('If Condition', changes['value'].currentValue);
 
-    // } else {
-    //   console.log('Else Condition', changes['value'].currentValue);
-    //   console.log('Else Condition', changes['value'].previousValue);
-    // }
+  //   // } else {
+  //   //   console.log('Else Condition', changes['value'].currentValue);
+  //   //   console.log('Else Condition', changes['value'].previousValue);
+  //   // }
 
-  }
+  // }
 
-  ngOnInit() {
-    console.log('Parent ngOnInit');
-  }
+  // ngOnInit() {
+  //   console.log('Parent ngOnInit');
+  // }
 
-  ngDoCheck() {
-    console.log('Parent ngDoCheck');
-  }
+  // ngDoCheck() {
+  //   console.log('Parent ngDoCheck');
+  // }
 
   ngAfterContentInit() {
-    console.log('Parent ngAfterContentInit', this.nameContent);
+    console.log('Parent ngAfterContentInit', this.contentchild.nativeElement);
   }
 
   ngAfterContentChecked() {
-    console.log('Parent ngAfterContentChecked', this.nameContent);
+    console.log('Parent ngAfterContentChecked', this.contentchild.nativeElement);
   }
 
-  // ngAfterViewInit() {
-  //   console.log('Parent ngAfterViewInit');
-  // }
+  ngAfterViewInit() {
+    console.log('Parent ngAfterViewInit');
+  }
 
-  // ngAfterViewChecked() {
-  //   console.log('Parent ngAfterViewChecked');
-  // }
+  ngAfterViewChecked() {
+    console.log('Parent ngAfterViewChecked');
+  }
 
-  // ngOnDestroy() {
-  //   console.log('Parent ngOnDestroy');
-  // }
+  ngOnDestroy() {
+    console.log('Parent ngOnDestroy');
+  }
 
 }

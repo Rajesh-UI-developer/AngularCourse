@@ -1,7 +1,15 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { form, userData } from './users.model';
+interface UserForm {
+  name: string;
+  lastname: string;
+  email: string;
+  phonenumber: string;
+  password: string;
+  confirmpassword: string;
+}
 @Component({
   selector: 'app-reactiveform',
   standalone: true,
@@ -10,12 +18,13 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './reactiveform.component.scss'
 })
 export class ReactiveformComponent {
+
   userForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.userForm = this.fb.group({
-      name: ['Rajesh', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
-      lastname: ['Vel', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
+      name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
+      lastname: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
       email: ['', [Validators.required, Validators.email]],
       phonenumber: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],
       password: ['', [
@@ -47,7 +56,7 @@ export class ReactiveformComponent {
     return password === confirmpassword ? null : { mismatch: true };
   }
   onEdit() {
-    const userData = {
+    const userData: UserForm = {
       name: 'Rajesh',
       lastname: 'Vel',
       email: 'rajesh@gmail.com',
@@ -62,11 +71,16 @@ export class ReactiveformComponent {
   }
 
   onSubmit() {
+    console.log(this.userForm);
+
     if (!this.userForm.invalid) {
-      console.log(this.userForm.value);
+      const FormValue: UserForm = this.userForm.value
+      console.log(FormValue);
     } else {
       console.log('Form Invalid');
 
     }
   }
+
+
 }

@@ -57,7 +57,7 @@ export class TemplatedrivenComponent {
   // Custom validation on confirmPassword field change
   validateConfirmPassword(form: NgForm) {
     // console.log(form.form.controls['confirmPassword'].value);
-    // console.log(form);
+    // console.log(form.value);
 
     console.log(this.errorMessages);
 
